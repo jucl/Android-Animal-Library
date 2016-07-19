@@ -2,6 +2,8 @@
 *.apk
 *.ap_
 
+Android-Animal-Library/app/src/main/j*
+
 # files for the dex VM
 *.dex
 
