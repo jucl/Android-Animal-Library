@@ -1,0 +1,3 @@
+[submodule "Android-Animal-Library/app/src/main/java"]
+	path = Android-Animal-Library/app/src/main/java
+	url = https://git.code.sf.net/u/jaycy/animal-av
