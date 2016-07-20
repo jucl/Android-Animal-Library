@@ -1,11 +1,10 @@
-apply plugin: 'com.android.application'
+
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.3"
-
+    buildToolsVersion '23.0.3'
     defaultConfig {
-        applicationId "de.tu_darmstadt.android_animal_library"
         minSdkVersion 17
         targetSdkVersion 23
         versionCode 1
@@ -17,10 +16,225 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    dexOptions {
+        incremental = true
+        preDexLibraries = false
+        javaMaxHeapSize = "6120M"
+        jumboMode = true
+    }
+
+    productFlavors {
+    }
+    sourceSets {
+        main {
+            java {
+
+                exclude 'de/ahrgr/**/*.java'
+                exclude 'gfgaa/**/*.java'
+                exclude 'AnimalGenerators/**/*.java'
+                //exclude 'animalscript/**/*.java'
+                exclude 'animalscript/desktop/*.java'
+                exclude 'animalscript/extensions/vhdl/*.java'
+                exclude 'anims/**/*.java'
+                exclude 'connect/**/*.java'
+                exclude 'doc/**/*.java'
+                exclude 'examples/**/*.java'
+                exclude 'example/**/*.java'
+                exclude 'Exercises/**/*.java'
+                exclude 'gfgaaa/**/*.java'
+                exclude 'grammer/**/*.java'
+                exclude 'htdptl/**/*.java'
+                exclude 'graphics/vhdl/AnimalImageDummy.java'
+                exclude 'graphics/AnimalImageDummy.java'
+                //exclude 'jhave/**/*.java'
+                exclude 'scheme/**/*.java'
+                exclude 'lib/**/*.java'
+                exclude 'translatorfiles/**/*.java'
+                //exclude 'util/**/*.java'
+                exclude 'VHDL_Component/**/*.java'
+                exclude 'interactionDemoAnim/**/*.java'
+
+                exclude 'extras/lifecycle/query/*.java'
+                exclude 'extras/lifecycle/query/**/*.java'
+                exclude 'extras/lifecycle/script/**/*.java'
+                exclude 'extras/animalsense/evaluate/*.java'
+                exclude 'extras/animalsense/simulate/*.java'
+                exclude 'extras/animalsense/serialize/*.java'
+                exclude 'extras/animalsense/ui/*.java'
+                exclude 'extras/animalsense/ui/**/*.java'
+                exclude 'extras/animalsense/test/*.java'
+
+
+                exclude 'algoanim/counter/examples/*.java'
+                exclude 'algoanim/counter/examples/**/*.java'
+                exclude 'algoanim/examples/*.java'
+
+
+                //exclude 'generators/backtracking/**/*.java'
+                //exclude 'generators/compression/**/*.java'
+                //exclude 'generators/cryptography/**/*.java'
+                //exclude 'generators/datastructures/**/*.java'
+                //exclude 'generators/graph/**/*.java'
+                //exclude 'generators/graphics/**/*.java'
+                //exclude 'generators/hardware/**/*.java'
+                //exclude 'generators/hashing/**/*.java'
+                //exclude 'generators/maths/**/*.java'
+                //exclude 'generators/network/**/*.java'
+                //exclude 'generators/misc/**/*.java'
+                //exclude 'generators/searching/**/*.java'
+                //exclude 'generators/sorting/**/*.java'
+                //exclude 'generators/tree/**/*.java'
+                //exclude 'generators/*.java'
+                //exclude 'generators/helpers/*.java'
+                //exclude 'generators/helpers/**/*.java'
+                exclude '*/**/MainActivity.java'
+
+                exclude 'generators/generatorframe/controller/*.java'
+                exclude 'generators/generatorframe/filter/*.java'
+                exclude 'generators/generatorframe/loading/*.java'
+                exclude 'generators/generatorframe/saving/*.java'
+                exclude 'generators/generatorframe/store/*.java'
+                exclude 'generators/generatorframe/view/*.java'
+                exclude 'generators/generatorframe/view/**/*.java'
+
+                exclude 'generators/framework/components/**/*.java'
+                exclude 'generators/framework/types/**/*.java'
+                exclude 'generators/framework/wizard/**/*.java'
+                //exclude 'generators/framework/properties/tree/*.java'
+                //exclude 'generators/framework/properties/tree/PropertiesTreePane.java'
+                exclude 'generators/framework/**/desktop/*.java'
+                exclude 'generators/framework/desktop/*.java'
+                exclude 'generators/framework/**/desktop/**/*.java'
+                exclude 'generators/framework/desktop/**/*.java'
+                //exclude 'generators/framework/properties/LoadFromXMLVisitor.java'
+
+                exclude 'generators/framework/AnimalGeneratorGUI.java'
+                exclude 'generators/framework/CustomFileFilter.java'
+                exclude 'generators/framework/GeneratorFileSupport.java'
+                exclude 'generators/framework/GeneratorGUI.java'
+                exclude 'generators/framework/GeneratorInterceptor.java'
+                exclude 'generators/framework/GeneratorManager.java'
+                //exclude 'generators/framework/GeneratorNode.java'
+                exclude 'generators/framework/GeneratorPropertiesEditor.java'
+                exclude 'generators/framework/GeneratorTree.java'
+                exclude 'generators/framework/GeneratorsMainPanel.java'
+                exclude 'generators/framework/GeneratorTreeListener.java'
+                exclude 'generators/framework/GeneratorTreeNode.java'
+                exclude 'generators/framework/GenGUI.java'
+                exclude 'generators/framework/NewGeneratorTree.java'
+                exclude 'generators/framework/NewPrimitiveDialog.java'
+                exclude 'generators/framework/NewPropertyTypeDialog.java'
+                exclude 'generators/framework/PropertiesGUI.java'
+                exclude 'generators/framework/PropertiesPanel.java'
+                exclude 'generators/framework/WizardGUI.java'
+
+
+                exclude 'generators/**/FeistelChiffre.java'
+                exclude 'generators/**/VigenereDecodeWrapper.java'
+                exclude 'generators/**/VigenereEncodeWrapper.java'
+                exclude 'generators/**/VigenereDecodeWrapperEN.java'
+                exclude 'generators/**/VigenereEncodeWrapperEN.java'
+                exclude 'generators/**/Kantenlistenalgorithmus.java'
+                exclude 'generators/**/Delaunay.java'
+                exclude 'generators/**/CFB_Generator.java'
+                exclude 'generators/**/OFB_Generator.java'
+                exclude 'generators/**/EdgeFillAlgo.java'
+                exclude 'generators/**/Voronoi.java'
+                exclude 'generators/**/AnimalAPIAdapter.java'
+                exclude 'generators/**/*simpleraytracing*'
+                exclude 'generators/**/SimpleRayTracing.java'
+                exclude 'generators/**/SimpleRayTracingGenerator.java'
+                exclude 'generators/**/DiscreteLogarithmPollardRho.java'
+                exclude 'generators/**/ExplicitEulerMethod.java'
+                exclude 'generators/**/MatrixGenerator.java'
+                exclude 'generators/**/MultiGenerator.java'
+                exclude 'generators/**/NewtonMethod**'
+                exclude 'generators/**/NewtonVerfahren*'
+                exclude 'generators/**/CustomerWarehouseDiagram.java'
+                exclude 'generators/**/DropHeuristik*'
+                exclude 'generators/**/MODI.java'
+                exclude 'generators/**/Modi*.java'
+                exclude 'generators/**/RamerDouglasPeucker*'
+                exclude 'generators/**/DrunkenBishop*'
+                exclude 'generators/**/drunkenbishop*'
+                exclude 'generators/**/Kalnischkies*'
+                exclude 'generators/**/SchulzeMethod*'
+                exclude 'generators/**/schulzemethod*'
+                exclude 'generators/**/ExpectimaxGenerator*'
+                exclude 'generators/**/BubbleSort*'
+                exclude 'generators/**/Quicksort*'
+                exclude 'generators/**/Animator*'
+                exclude 'generators/**/Hybridsort*'
+                exclude 'generators/**/HeapTests*'
+                exclude 'generators/**/*test*'
+                exclude 'generators/**/Test*'
+                exclude 'generators/**/PushRelabelGenerator*'
+                exclude 'generators/**/TheFaultAlgorithmGenerator*'
+                exclude 'generators/**/Minimierung*'
+                exclude 'generators/**/DFAMinimierung*'
+                exclude 'generators/**/OPTICS*'
+                exclude 'generators/**/KNN*'
+
+                exclude 'util/Kalnischkies*'
+
+                /*
+                exclude 'generators//'
+                */
+                exclude 'interactionsupport/views/*.java'
+                exclude 'interactionsupport/controllers/**/*.java'
+                //exclude 'interactionsupport/parser/*.java'
+                exclude 'interactionsupport/parser/desktop/*.java'
+                exclude 'interactionsupport/patterns/*.java'
+                //exclude 'interactionsupport/models/backend/*.java'
+                //exclude 'interactionsupport/models/backend/**/*.java'
+
+
+                exclude 'animal/desktop/*.java'
+                exclude 'animal/*.java'
+                //exclude 'animal/animator/*.java'
+                exclude 'animal/api/*.java'
+                exclude 'animal/exchange/*.java'
+                exclude 'animal/exchange/**/*.java'
+                //exclude 'animal/graphics/*.java'
+                //exclude 'animal/graphics/**/*.java'
+                //exclude 'animal/handler/*.java'
+                //exclude 'animal/misc/*.java'
+                exclude 'animal/misc/desktop/*.java'
+                exclude 'animal/gui/*.java'
+                exclude 'animal/dialog/*.java'
+                //exclude 'animal/editor/*.java'
+                exclude 'animal/editor/animators/*.java'
+                exclude 'animal/editor/properties/*.java'
+                exclude 'animal/editor/graphics/*.java'
+                exclude 'animal/editor/graphics/**/*.java'
+                exclude 'animal/editor/types/*.java'
+                exclude 'animal/vhdl/*.java'
+                exclude 'animal/vhdl/**/*.java'
+                exclude 'animal/main/*.java'
+                exclude 'animal/main/lookandfeel/*.java'
+                exclude 'animal/main/lookandfeel/**/*.java'
+
+
+                exclude 'translator/AnimalSpecificTranslatableGUIElement.java'
+                exclude 'translator/ExtendedActionButton.java'
+                exclude 'translator/ExtendedAction.java'
+                exclude 'translator/TranslatableGUIElement.java'
+
+            }
+        }
+        androidTest {
+            java {
+                exclude 'animal/*.java'
+                exclude 'animal/misc/*.java'
+                exclude 'translator/*.java'
+            }
+        }
+    }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.android.support:design:23.0.1'
 }
