@@ -1,0 +1,11 @@
+Anmerkungen zur Komplexitaet
+
+Die Binaere Suche hat eine logarithmische Komplexitaet (zur Basis 2).
+Um ein Element unter 1024 Element zu finden, sind also maximal 10 
+Iterationen erforderlich. Dies kann man damit erklaeren, dass
+in jedem Schritt die Suchmenge halbiert wird, indem jeweils eine 
+Haelfte des Teilfeldes aus der Betrachtung genommen wird.
+
+Es ist wichtig, daran zu denken, dass die vorliegenden Daten sortiert
+sein maessen. Andernfalls liefert die Binaere Suche nur zufaellig das
+korrekte Ergebnis.
