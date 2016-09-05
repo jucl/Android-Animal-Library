@@ -1,0 +1,10 @@
+Die Lineare Suche ist wohl das trivialste Suchverfahren.
+
+Angefangen mit dem ersten Element werden die gegebenen Daten
+- hier ein Array - der Reihe nach aeberpraeft, ob sie dem gesuchten
+Element entsprechen. Falls dies der Fall ist, wird die aktuelle
+Position als Ergebniswert zuraeckgegeben. Andernfalls wird die
+Suche mit der naechsten Positionfortgesetzt.
+
+Wird das gesuchte Element nicht gefunden, wird der Wert -1 als
+'Fehlermarkierung' zuraeckgegeben.

@@ -1,0 +1,4 @@
+Anmerkungen zur Komplexitaet
+
+Insertion Sort ist generell fast immer quadratisch, nur bei
+fast vollstaendig sortierten Daten ist er linear.

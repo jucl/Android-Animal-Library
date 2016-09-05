@@ -1,0 +1,3 @@
+Anmerkungen zur Komplexitaet
+
+Die Komplexitaet von Shell Sort ist O(n log2 n).

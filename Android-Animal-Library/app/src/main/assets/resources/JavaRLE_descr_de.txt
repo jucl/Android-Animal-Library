@@ -1,0 +1,12 @@
+Die Lauflaengendkodierung ist ein verlustfreies Kompressionsverfahren faer Texte. Das
+Verfahren ist faer Texte geiegnet, bei dem einzelne Zeichen oft aufeinader folgen."
+So wird beispielsweise die Zeichenkette 'AAAA' zu 4A zusammengefasst. Einzelne"
+Zeichen werden dahingegen nicht veraendert und werden unkodiert aebernommen.
+
+1) Iteriere buchstabenweise aeber das StringArray.
+
+2) Zaehle dabei die aufeinanderfolgenen gleichen Buchstaben bis zur aktuellen Iterationsstelle.
+
+3) Faer das n-fache aufeinanderfolgende Auftreten eines Buchstaben X, kodiere nX.
+
+4) Faer das einfache Auftreten von einem Buchstaben Y kodiere nur Y.
